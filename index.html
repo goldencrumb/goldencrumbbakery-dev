@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Crumb | Home-Baked Millet Goods</title>
+    <style>
+        /* Rustic, warm bakery color palette */
+        :root {
+            --primary-bg: #FAF6F0; /* Cream */
+            --text-dark: #3E2723; /* Dark brown */
+            --accent-gold: #D4A373; /* Golden baked brown */
+            --whatsapp-green: #25D366;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: var(--accent-gold);
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid #EAE0D5;
+        }
+
+        .product-card h3 {
+            color: var(--accent-gold);
+            margin-top: 0;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--text-dark);
+            margin: 10px 0;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: var(--whatsapp-green);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: transform 0.2s;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Golden Crumb</h1>
+        <p>Wholesome, home-baked millet goodness from our kitchen to yours.</p>
+    </header>
+
+    <div class="container">
+        <h2 style="text-align: center;">Our Freshly Baked Menu</h2>
+        
+        <div class="products-grid">
+            
+            <!-- Product 1 -->
+            <div class="product-card">
+                <h3>Ragi Chocolate Cookies</h3>
+                <p>Rich, fudgy cookies made with organic finger millet and dark chocolate chunks. 100% guilt-free.</p>
+                <div class="price">₹250 / Box of 6</div>
+                <!-- Note: Replace 917305590333 with your actual WhatsApp number below -->
+                <a href="https://wa.me/917305590333?text=Hi%20Golden%20Crumb!%20I%20would%20like%20to%20order%20the%20Ragi%20Chocolate%20Cookies." class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <h3>Pearl Millet Banana Bread</h3>
+                <p>Moist and naturally sweet banana loaf baked with wholesome Bajra. Perfect for morning tea.</p>
+                <div class="price">₹350 / Loaf</div>
+                <a href="https://wa.me/917305590333?text=Hi%20Golden%20Crumb!%20I%20would%20like%20to%20order%20the%20Pearl%20Millet%20Banana%20Bread." class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <h3>Foxtail Millet Brownies</h3>
+                <p>Dense, gooey brownies packed with the nutritional power of Thinai. Refined sugar-free.</p>
+                <div class="price">₹400 / Box of 4</div>
+                <a href="https://wa.me/917305590333?text=Hi%20Golden%20Crumb!%20I%20would%20like%20to%20order%20the%20Foxtail%20Millet%20Brownies." class="whatsapp-btn" target="_blank">Order via WhatsApp</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Golden Crumb. Proudly baked in Chennai.</p>
+    </footer>
+
+</body>
+</html>
