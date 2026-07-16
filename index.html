@@ -23,11 +23,12 @@
             padding-bottom: 100px; /* Space for sticky cart bar */
         }
 
+        /* Updated Header Styles */
         header {
             text-align: center;
-            padding: 3rem 1rem;
-            background-color: var(--accent-gold);
-            color: white;
+            padding: 3rem 1rem 2rem 1rem;
+            background-color: var(--primary-bg); /* Matches the logo background */
+            color: var(--text-dark); /* Dark text for readability */
         }
         
         /* New Logo Styles */
@@ -255,9 +256,8 @@
 </head>
 <body>
 
-    <!-- Header moved inside the body tag -->
     <header>
-        <img src="GC_WS_logo.png" alt="Golden Crumb Logo" class="brand-logo">
+        <img src="images/brand-logo.png" alt="Golden Crumb Logo" class="brand-logo">
         <h1>Golden Crumb</h1>
         <p>Wholesome, home-baked millet goodness from our kitchen to yours.</p>
     </header>
@@ -365,7 +365,9 @@
 
     <!-- Cart Logics, Session Management & URL Structuring -->
     <script>
-        const WHATSAPP_NUMBER = "917305590333";
+        // The number is Base64 encoded to protect against spam scrapers
+        const secureContact = "OTE3MzA1NTkwMzMz";
+        const WHATSAPP_NUMBER = atob(secureContact);
         
         // Load existing cart from localStorage, or start a new empty one
         let cart = JSON.parse(localStorage.getItem('goldenCrumbCart')) || {};
