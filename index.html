@@ -22,19 +22,12 @@
             line-height: 1.6;
         }
         
-        /* Header - Centered Properly */
         header { 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center; 
+            display: flex; flex-direction: column; align-items: center; text-align: center; 
             padding: 3rem 1rem 1rem 1rem; 
         }
         .brand-logo { 
-            max-width: 220px; 
-            height: auto; 
-            margin-bottom: 15px; 
-            border-radius: 0px; 
+            max-width: 220px; height: auto; margin-bottom: 15px; 
             box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
         }
         h1 { font-size: 2.5rem; margin: 0; color: var(--text-dark); letter-spacing: 1px;}
@@ -42,7 +35,6 @@
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
 
-        /* Promise Section */
         .promise-section {
             background-color: white; padding: 40px 20px; text-align: center;
             margin: 2rem 0 3rem 0; border-radius: 12px; border: 1px solid #EAE0D5;
@@ -56,30 +48,24 @@
         .promise-card h3 { color: var(--accent-gold); margin: 0 0 10px 0; font-size: 1.2rem; }
         .promise-card p { color: #666; font-size: 0.95rem; margin: 0; }
 
-        /* Product Grid */
         .menu-title { text-align: center; font-size: 2rem; margin-bottom: 1rem;}
+        
+        /* Product Grid */
         .products-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-            gap: 2rem; 
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 2rem; 
         }
-
         .product-card { 
             background: white; border-radius: 12px; overflow: hidden; 
             box-shadow: var(--card-shadow); transition: transform 0.2s ease; 
             display: flex; flex-direction: column; border: 1px solid #EAE0D5;
         }
         .product-card:hover { transform: translateY(-5px); }
-        
-        /* Forces all images to be exactly the same size without stretching */
         .product-card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #EAE0D5; }
         .card-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
-        
         .product-card h3 { margin: 0 0 8px 0; font-size: 1.2rem; color: var(--text-dark);}
         .product-card p { font-size: 0.9rem; color: #666; margin-bottom: auto; }
         .price { font-size: 1.15rem; font-weight: bold; color: var(--accent-gold); margin: 15px 0 10px 0; }
 
-        /* Quantity Selector */
         .quantity-selector { display: flex; align-items: center; justify-content: center; gap: 15px; }
         .qty-btn { 
             background: var(--primary-bg); border: 1px solid #EAE0D5; width: 35px; height: 35px; 
@@ -104,7 +90,7 @@
         .whatsapp-checkout-btn { 
             background: var(--whatsapp-green); color: white; padding: 12px 25px; 
             border-radius: 50px; text-decoration: none; font-weight: bold; 
-            box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2); transition: 0.2s;
+            box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2); transition: 0.2s; cursor: pointer; border: none; font-size: 1rem;
         }
         .whatsapp-checkout-btn:hover { transform: scale(1.03); }
 
@@ -114,15 +100,12 @@
 <body>
 
     <header>
-        <!-- NOTE: If your logo is a PNG, change .jpg to .png below -->
         <img src="images/brand-logo.png" alt="Golden Crumb" class="brand-logo">
         <h1>Golden Crumb</h1>
         <p class="tagline">Wholesome, home-baked millet goodness from our kitchen to yours.</p>
     </header>
 
     <div class="container">
-        
-        <!-- Our Promise Section -->
         <section class="promise-section">
             <h2>Our Promise: Real Ingredients, No Shortcuts</h2>
             <p class="promise-intro">We trade the commercial bakery playbook for the ingredients our grandmothers trusted. No chemistry-lab additives—just honest, earth-grown goodness baked fresh in our Chennai kitchen.</p>
@@ -147,129 +130,8 @@
 
         <h2 class="menu-title">Our Freshly Baked Menu</h2>
         
-        <div class="products-grid">
-            
-            <!-- Product 1 -->
-            <div class="product-card" data-name="Nutty Brownie (Karuppu Kavuni)" data-price="300">
-                <img src="images/nutty-brownie-karuppu-kavuni.jpeg" alt="Nutty Brownie">
-                <div class="card-content">
-                    <h3>Nutty Brownie</h3>
-                    <p>Rich Karuppu Kavuni millet brownie topped with crunchy roasted nuts.</p>
-                    <div class="price">₹300</div>
-                    <div class="quantity-selector">
-                        <button class="qty-btn minus">-</button>
-                        <span class="qty-count">0</span>
-                        <button class="qty-btn plus">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card" data-name="Choco Ragi Cookies" data-price="250">
-                <img src="images/choco-ragi-cookie.jpeg" alt="Choco Ragi Cookies">
-                <div class="card-content">
-                    <h3>Choco Ragi Cookies</h3>
-                    <p>Fudgy cookies made with organic finger millet and dark chocolate.</p>
-                    <div class="price">₹250</div>
-                    <div class="quantity-selector">
-                        <button class="qty-btn minus">-</button>
-                        <span class="qty-count">0</span>
-                        <button class="qty-btn plus">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card" data-name="Cholam Butter Cookies" data-price="200">
-                <img src="images/cholam-butter-cookie.jpeg" alt="Cholam Butter Cookies">
-                <div class="card-content">
-                    <h3>Cholam Butter Cookies</h3>
-                    <p>Melt-in-your-mouth classic butter cookies baked with wholesome Cholam (Sorghum).</p>
-                    <div class="price">₹200</div>
-                    <div class="quantity-selector">
-                        <button class="qty-btn minus">-</button>
-                        <span class="qty-count">0</span>
-                        <button class="qty-btn plus">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card" data-name="Choco Karuppu Kavuni Cookies" data-price="280">
-                <img src="images/choco-karuppu-kavani-cookie.jpeg" alt="Choco Karuppu Kavuni Cookies">
-                <div class="card-content">
-                    <h3>Karuppu Kavuni Choco</h3>
-                    <p>Unique heart-shaped cookies blending black rice flour and rich chocolate.</p>
-                    <div class="price">₹280</div>
-                    <div class="quantity-selector">
-                        <button class="qty-btn minus">-</button>
-                        <span class="qty-count">0</span>
-                        <button class="qty-btn plus">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 5 -->
-            <div class="product-card" data-name="Cholam Stevia Cookies" data-price="220">
-                <img src="images/cholam-stevia-cookie.jpeg" alt="Cholam Stevia Cookies">
-                <div class="card-content">
-                    <h3>Cholam Stevia Cookies</h3>
-                    <p>Diabetic-friendly sorghum cookies naturally sweetened with zero-calorie Stevia.</p>
-                    <div class="price">₹220</div>
-                    <div class="quantity-selector">
-                        <button class="qty-btn minus">-</button>
-                        <span class="qty-count">0</span>
-                        <button class="qty-btn plus">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 6 -->
-            <div class="product-card" data-name="Masala Wheat Cookies" data-price="180">
-                <img src="images/masala-wheat-cookie.jpeg" alt="Masala Wheat Cookies">
-                <div class="card-content">
-                    <h3>Masala Wheat Cookies</h3>
-                    <p>Savory whole wheat bites perfectly spiced with traditional Indian masala.</p>
-                    <div class="price">₹180</div>
-                    <div class="quantity-selector">
-                        <button class="qty-btn minus">-</button>
-                        <span class="qty-count">0</span>
-                        <button class="qty-btn plus">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 7 -->
-            <div class="product-card" data-name="Ragi Muffin" data-price="150">
-                <img src="images/ragi-muffin.jpeg" alt="Ragi Muffin">
-                <div class="card-content">
-                    <h3>Frosted Ragi Muffin</h3>
-                    <p>Soft and moist finger millet muffins topped with a light, creamy frosting.</p>
-                    <div class="price">₹150</div>
-                    <div class="quantity-selector">
-                        <button class="qty-btn minus">-</button>
-                        <span class="qty-count">0</span>
-                        <button class="qty-btn plus">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 8 -->
-            <div class="product-card" data-name="Eggless Wheat Bread" data-price="120">
-                <img src="images/wheat-bread-eggless.jpeg" alt="Eggless Wheat Bread">
-                <div class="card-content">
-                    <h3>Eggless Wheat Bread</h3>
-                    <p>Freshly baked, soft 100% whole wheat bread loaf. Completely eggless.</p>
-                    <div class="price">₹120</div>
-                    <div class="quantity-selector">
-                        <button class="qty-btn minus">-</button>
-                        <span class="qty-count">0</span>
-                        <button class="qty-btn plus">+</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        <!-- JavaScript will automatically generate your products right here -->
+        <div class="products-grid" id="product-list"></div>
     </div>
 
     <!-- Sticky Bottom Cart Bar -->
@@ -278,101 +140,16 @@
             <span class="cart-summary" id="cartSummary">0 items selected</span>
             <span class="cart-total" id="cartTotal">₹0</span>
         </div>
-        <a href="#" class="whatsapp-checkout-btn" id="whatsappCheckout" target="_blank">
-            <span>Order via WhatsApp</span>
-        </a>
+        <button class="whatsapp-checkout-btn" id="whatsappCheckout">Order via WhatsApp</button>
     </div>
 
     <footer>
         <p>&copy; 2026 Golden Crumb. Proudly baked in Chennai.</p>
     </footer>
 
-    <!-- Complete Cart JavaScript -->
-    <script>
-        const secureContact = "OTE3MzA1NTkwMzMz";
-        const WHATSAPP_NUMBER = atob(secureContact);
-        
-        let cart = JSON.parse(localStorage.getItem('goldenCrumbCart')) || {};
-
-        document.querySelectorAll('.product-card').forEach(card => {
-            const name = card.getAttribute('data-name');
-            const price = parseInt(card.getAttribute('data-price'));
-            const countDisplay = card.querySelector('.qty-count');
-            
-            if (cart[name]) {
-                countDisplay.textContent = cart[name];
-            }
-            
-            card.querySelector('.plus').addEventListener('click', () => {
-                cart[name] = (cart[name] || 0) + 1;
-                updateDisplay();
-            });
-
-            card.querySelector('.minus').addEventListener('click', () => {
-                if (cart[name] && cart[name] > 0) {
-                    cart[name]--;
-                    if (cart[name] === 0) delete cart[name];
-                    updateDisplay();
-                }
-            });
-
-            function updateDisplay() {
-                countDisplay.textContent = cart[name] || 0;
-                saveCart();
-                calculateTotal();
-            }
-        });
-
-        function saveCart() {
-            localStorage.setItem('goldenCrumbCart', JSON.stringify(cart));
-        }
-
-        function calculateTotal() {
-            let totalItems = 0;
-            let totalPrice = 0;
-            let messageText = "Hi Golden Crumb! I would like to place an order:\n\n";
-
-            document.querySelectorAll('.product-card').forEach(card => {
-                const name = card.getAttribute('data-name');
-                const price = parseInt(card.getAttribute('data-price'));
-                const qty = cart[name] || 0;
-
-                if (qty > 0) {
-                    totalItems += qty;
-                    totalPrice += (price * qty);
-                    messageText += `• ${qty}x ${name} (₹${price * qty})\n`;
-                }
-            });
-
-            messageText += `\nTotal Amount: ₹${totalPrice}\n\nPlease confirm my order and let me know the payment details!`;
-
-            const cartBar = document.getElementById('cartBar');
-            const cartSummary = document.getElementById('cartSummary');
-            const cartTotal = document.getElementById('cartTotal');
-            const checkoutBtn = document.getElementById('whatsappCheckout');
-
-            if (totalItems > 0) {
-                cartSummary.textContent = `${totalItems} item${totalItems > 1 ? 's' : ''} selected`;
-                cartTotal.textContent = `₹${totalPrice}`;
-                checkoutBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(messageText)}`;
-                cartBar.classList.add('active');
-            } else {
-                cartBar.classList.remove('active');
-            }
-        }
-
-        calculateTotal();
-
-        const checkoutBtn = document.getElementById('whatsappCheckout');
-        checkoutBtn.addEventListener('click', () => {
-            localStorage.removeItem('goldenCrumbCart');
-            for (let key in cart) { delete cart[key]; }
-            document.querySelectorAll('.qty-count').forEach(display => {
-                display.textContent = '0';
-            });
-            calculateTotal();
-        });
-    </script>
+    <!-- Scripts are called at the bottom -->
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
 
 </body>
 </html>
