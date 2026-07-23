@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Crumb | Digital Flyer</title>
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: #d1d5db;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .flyer-card {
+            width: 100%;
+            max-width: 500px;
+            background-color: #FBEDDC;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border: 2px solid #EAE0D5;
+            color: #3E2723;
+        }
+
+        .flyer-header {
+            display: flex;
+            align-items: center;
+            padding: 20px 20px 15px 20px;
+            gap: 15px;
+            background: #ffffff;
+            border-bottom: 2px dashed #D4A373;
+        }
+        
+        .header-logo { width: 85px; height: auto; object-fit: contain; }
+        .header-text { flex: 1; }
+        .brand-name { font-size: 2.2rem; font-weight: bold; color: #3E2723; line-height: 1; letter-spacing: 1px; }
+        .brand-tagline { font-size: 1rem; color: #D4A373; margin-top: 4px; font-style: italic; }
+        .brand-sub { font-size: 0.72rem; color: #666; margin-top: 3px; font-weight: 500; }
+
+        .pillars-ribbon {
+            display: flex; justify-content: space-around;
+            background: #3E2723; color: #FBEDDC;
+            padding: 8px 10px; font-size: 0.68rem; font-weight: 600; text-align: center;
+        }
+        
+        .menu-title {
+            text-align: center; font-size: 1.1rem; font-weight: 700;
+            color: #3E2723; margin: 15px 0 10px 0;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        .products-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 10px; padding: 0 15px 20px 15px;
+        }
+        
+        .product-card {
+            background: #ffffff; border-radius: 10px; padding: 8px;
+            text-align: center; border: 1px solid #EAE0D5;
+            display: flex; flex-direction: column; justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+        }
+        
+        .product-card img {
+            width: 100%; height: 90px; object-fit: cover;
+            border-radius: 6px; margin-bottom: 6px;
+        }
+        
+        .product-title {
+            font-size: 0.7rem; font-weight: 600; color: #3E2723;
+            line-height: 1.2; margin-bottom: 2px; height: 2.4em;
+            overflow: hidden; display: -webkit-box;
+            -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+        }
+        
+        .product-weight { font-size: 0.62rem; color: #777; margin-bottom: 5px; }
+        
+        .product-price {
+            background: #D4A373; color: #ffffff; font-size: 0.75rem;
+            font-weight: 700; padding: 3px 6px; border-radius: 12px;
+            align-self: center; width: 100%;
+        }
+
+        .flyer-footer { background-color: #3E2723; color: #FBEDDC; padding: 20px; }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr; 
+            gap: 12px 5px;
+            font-size: 0.68rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item { display: flex; align-items: center; gap: 8px; }
+        .contact-item span { white-space: nowrap; }
+        
+        .contact-icon { width: 14px; height: 14px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+        .contact-icon svg { width: 100%; height: 100%; }
+
+        .footer-divider {
+            border: none; border-top: 1px solid rgba(255, 255, 255, 0.15);
+            margin: 0 0 12px 0;
+        }
+
+        .thank-you-note {
+            text-align: center; font-size: 1.1rem; color: #D4A373;
+            font-style: italic; font-weight: bold; letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flyer-card">
+        
+        <!-- Header -->
+        <div class="flyer-header">
+            <img src="images/brand-logo.png" alt="Golden Crumb" class="header-logo" onerror="this.style.display='none'">
+            <div class="header-text">
+                <div class="brand-name">Golden Crumb</div>
+                <div class="brand-tagline">Homemade Goodness, Baked with Love ♡</div>
+                <div class="brand-sub">Millet goodness in every bite</div>
+            </div>
+        </div>
+
+        <!-- Pillars -->
+        <div class="pillars-ribbon">
+            <span>🌾 100% Traditional Millets</span>
+            <span>🚫 Zero Preservatives</span>
+            <span>🍯 Naturally Sweetened</span>
+        </div>
+
+        <div class="menu-title">Our Freshly Baked Menu</div>
+
+        <!-- Product Grid -->
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/dates-brownie.jpeg" alt="Dates Brownie" onerror="this.src='https://via.placeholder.com/150'">
+                <div><div class="product-title">Dates Brownie (Karuppu Kavani)</div><div class="product-weight">200 gms</div></div>
+                <div class="product-price">₹200</div>
+            </div>
+            <div class="product-card">
+                <img src="images/choco-ragi-cookie.jpeg" alt="Choco Ragi Cookies" onerror="this.src='https://via.placeholder.com/150'">
+                <div><div class="product-title">Choco Ragi Cookies</div><div class="product-weight">200 gms</div></div>
+                <div class="product-price">₹160</div>
+            </div>
+            <div class="product-card">
+                <img src="images/cholam-butter-cookie.jpeg" alt="Cholam Butter Cookies" onerror="this.src='https://via.placeholder.com/150'">
+                <div><div class="product-title">Cholam Butter Cookies</div><div class="product-weight">200 gms</div></div>
+                <div class="product-price">₹140</div>
+            </div>
+            <div class="product-card">
+                <img src="images/choco-karuppu-kavani-cookie.jpeg" alt="Choco Karuppu Kavani" onerror="this.src='https://via.placeholder.com/150'">
+                <div><div class="product-title">Choco Karuppu Kavani</div><div class="product-weight">200 gms</div></div>
+                <div class="product-price">₹170</div>
+            </div>
+            <div class="product-card">
+                <img src="images/mini-bites.jpeg" alt="Mini bites" onerror="this.src='https://via.placeholder.com/150'">
+                <div><div class="product-title">Mini Bites</div><div class="product-weight">200 gms</div></div>
+                <div class="product-price">₹210</div>
+            </div>
+            <div class="product-card">
+                <img src="images/cholam-stevia-cookie.jpeg" alt="Cholam Stevia Cookies" onerror="this.src='https://via.placeholder.com/150'">
+                <div><div class="product-title">Cholam Stevia Cookies</div><div class="product-weight">200 gms</div></div>
+                <div class="product-price">₹290</div>
+            </div>
+            <div class="product-card">
+                <img src="images/masala-wheat-cookie.jpeg" alt="Masala Wheat cookies" onerror="this.src='https://via.placeholder.com/150'">
+                <div><div class="product-title">Masala Wheat Cookies</div><div class="product-weight">200 gms</div></div>
+                <div class="product-price">₹180</div>
+            </div>
+            <div class="product-card">
+                <img src="images/wheat-bread-eggless.jpeg" alt="Wheat Bread" onerror="this.src='https://via.placeholder.com/150'">
+                <div><div class="product-title">Wheat Bread (Eggless)</div><div class="product-weight">Standard</div></div>
+                <div class="product-price">₹90</div>
+            </div>
+            <div class="product-card">
+                <img src="images/ragi-muffin.jpeg" alt="Ragi Muffin" onerror="this.src='https://via.placeholder.com/150'">
+                <div><div class="product-title">Ragi Muffin</div><div class="product-weight">Per piece</div></div>
+                <div class="product-price">₹40</div>
+            </div>
+            <div class="product-card">
+                <img src="images/almond-sticks.jpeg" alt="Almond sticks" onerror="this.src='https://via.placeholder.com/150'">
+                <div><div class="product-title">Almond sticks</div><div class="product-weight">200 gms</div></div>
+                <div class="product-price">₹180</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="flyer-footer">
+            <div class="contact-grid">
+                <!-- Left 1: Website -->
+                <div class="contact-item">
+                    <div class="contact-icon"><svg viewBox="0 0 24 24" fill="#3b82f6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+                    <span>goldencrumbbakery.in</span>
+                </div>
+                <!-- Right 1: WhatsApp -->
+                <div class="contact-item">
+                    <div class="contact-icon"><svg viewBox="0 0 24 24" fill="#22c55e"><path d="M12.04 2c-5.46 0-9.91 4.45-9.93 9.91-.01 1.75.46 3.45 1.34 4.95L2 22l5.31-1.39c1.45.8 3.1 1.22 4.79 1.22h.01c5.46 0 9.91-4.45 9.93-9.91.02-2.65-1.01-5.14-2.88-7.02A9.87 9.87 0 0 0 12.04 2zm5.46 14.15c-.22.62-1.28 1.2-1.77 1.24-.45.04-1.04.14-3.34-.81-2.76-1.15-4.54-4-4.67-4.18-.13-.17-1.12-1.48-1.12-2.83 0-1.34.7-2.05.95-2.31.25-.26.54-.33.72-.33.18 0 .36 0 .52.01.17.01.39-.06.6.45.22.53.71 1.74.77 1.86.06.12.11.27.02.44-.08.17-.13.28-.26.43-.13.15-.27.32-.38.44-.13.13-.26.27-.11.53.15.26.66 1.09 1.41 1.76.97.87 1.78 1.13 2.04 1.26.26.13.41.11.56-.06.15-.17.65-.75.82-1.01.17-.26.34-.22.58-.13.24.08 1.54.73 1.8.86.26.13.44.19.5.3.06.11.06.63-.16 1.25z"/></svg></div>
+                    <span>73055 90333</span>
+                </div>
+                <!-- Left 2: Phone -->
+                <div class="contact-item">
+                    <div class="contact-icon"><svg viewBox="0 0 24 24" fill="#ec4899"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+                    <span>73055 90333</span>
+                </div>
+                <!-- Right 2: Facebook -->
+                <div class="contact-item">
+                    <div class="contact-icon"><svg viewBox="0 0 24 24" fill="#3b82f6"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-1.11 9-5.53 9-10.95 0-5.52-4.48-10-10-10z"/></svg></div>
+                    <span>@goldencrumbworks</span>
+                </div>
+                <!-- Left 3: Instagram -->
+                <div class="contact-item">
+                    <div class="contact-icon"><svg viewBox="0 0 24 24" fill="#d946ef"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25zM12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg></div>
+                    <span>@goldencrumbworks</span>
+                </div>
+                <!-- Right 3: Email -->
+                <div class="contact-item">
+                    <div class="contact-icon"><svg viewBox="0 0 24 24" fill="#a855f7"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+                    <span>custom.orders@goldencrumbbakery.in</span>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            <div class="thank-you-note">Thank you for supporting a small business! ♡</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

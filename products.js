@@ -70,5 +70,12 @@ const products = [
         currency: "INR",
         weight: "Per piece",
         image: "ragi-muffin.jpeg"
+    },
+	{
+        id: 10, 
+        name: "Almond sticks",
+        weight: "200 gms",
+        price: 180,
+        image: "almond-sticks.jpeg"
     }
 ];
